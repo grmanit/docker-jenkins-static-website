@@ -1,4 +1,4 @@
-FROM grmanit/docker-jenkins-base
+FROM grmanit/jenkins-base
 
 RUN curl -sL https://deb.nodesource.com/setup_7.x | bash - &&\
     apt-get update &&\

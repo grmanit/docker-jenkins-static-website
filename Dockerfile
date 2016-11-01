@@ -5,3 +5,5 @@ RUN curl -sL https://deb.nodesource.com/setup_7.x | bash - &&\
     apt-get install -y ruby-full nodejs build-essential &&\
     gem install bundler &&\
     npm install -g bower
+
+RUN chmod -R 777 /var/lib/gems

@@ -1,9 +1,6 @@
-FROM grmanit/jenkins-base
+FROM grmanit/jenkins-nodejs
 
-# the nodesource setup script already runs apt-get update
-RUN curl -sL https://deb.nodesource.com/setup_7.x | bash - &&\
-    apt-get install -y ruby-full nodejs build-essential && rm -rf /var/lib/apt/lists/* &&\
-    gem install bundler &&\
-    npm install -g bower
+RUN apt-get update && apt-get install -y ruby-full && rm -rf /var/lib/apt/lists/* &&\
+    gem install bundler
 
 RUN chmod -R 777 /var/lib/gems /usr/local
